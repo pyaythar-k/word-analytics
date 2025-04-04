@@ -1,3 +1,3 @@
-export default function Warning({ warningText }) {
-  return <p className="warning">{warningText}</p>;
+export default function Warning({ children }) {
+  return <p className="warning">{children}</p>;
 }

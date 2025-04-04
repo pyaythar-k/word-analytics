@@ -1,17 +1,21 @@
-import H2 from "./H2";
-
 export default function Stats({ stats }) {
+  //   const {
+  //     numberofWords,
+  //     numberOfCharacters,
+  //     instagramCharactersLeft,
+  //     facebookCharactersLeft,
+  //   } = stats;
   return (
     <section className="stats">
-      <Stat number={stats.numberOfWords} type="Words" />
-      <Stat number={stats.numberOfCharacters} type="Characters" />
-      <Stat number={stats.instagramCharactersLeft} type="Instagram" />
-      <Stat number={stats.facebookCharactersLeft} type="Facebook" />
+      <Stat number={stats.numberOfWords} label="Words" />
+      <Stat number={stats.numberOfCharacters} label="Characters" />
+      <Stat number={stats.instagramCharactersLeft} label="Instagram" />
+      <Stat number={stats.facebookCharactersLeft} label="Facebook" />
     </section>
   );
 }
 
-function Stat({ number, type }) {
+function Stat({ number, label }) {
   return (
     <section className="stat">
       <span
@@ -19,8 +23,7 @@ function Stat({ number, type }) {
       >
         {number}
       </span>
-
-      <H2>{type}</H2>
+      <h2 className="second-heading">{label}</h2>
     </section>
   );
 }
